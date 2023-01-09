@@ -1,6 +1,11 @@
 const express = require('express');
 //const res = require('express/lib/response');
 const app = express();
+const PORT = process.env.PORT || 3030;
+
+// your code
+
+
 //const server = require('http').Server(app)
 //const io = require('socket.io')(server)
 app.set('view engine', 'ejs');
@@ -17,4 +22,5 @@ app.get('/', function(req, res) {
 
 
 
-app.listen(3000)
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
